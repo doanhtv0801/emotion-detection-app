@@ -1,0 +1,75 @@
+body {
+    background-color: #f9f9f9;
+    font-family: 'Helvetica Neue', sans-serif;
+    color: #333;
+    padding: 30px;
+    text-align: center;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+input[type="file"] {
+    margin-top: 15px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.result {
+    margin-top: 30px;
+    font-size: 1.4rem;
+    color: #333;
+}
+
+.result span {
+    color: #e91e63;
+    font-weight: bold;
+}
+
+.preview img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+.loading {
+    margin-top: 20px;
+    color: #f8f8f8;
+    font-weight: bold;
+    animation: blink 1s infinite;
+    text-align: center;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+.preview-img {
+    margin-top: 10px;
+    max-width: 200px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+}
+

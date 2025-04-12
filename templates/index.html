@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>感情認識アプリ</title>
+    <link rel="stylesheet" href="{{ url_for('static', 
+filename='style.css') }}">
+    <script defer src="{{ url_for('static', filename='script.js') 
+}}"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>🧠 顔画像から感情を認識するアプリ</h1>
+
+        <form method="POST" enctype="multipart/form-data" onsubmit="return 
+showLoading()">
+            <input type="file" name="image" accept="image/*" required>
+            <button type="submit">分析する</button>
+        </form>
+
+        <div id="loading" class="loading" style="display:none;">
+            <p>🌀 感情を分析中...</p>
+        </div>
+
+        {% if emotion %}
+            <div class="result">
+                <h2>😊 感情結果: <span>{{ emotion }}</span></h2>
+            </div>
+        {% endif %}
+
+        {% if image_path %}
+            <div class="image-preview">
+                <h3>アップロードされた画像:</h3>
+                <img src="{{ url_for('static', filename='uploads/' ~ 
+image_path) }}" alt="Uploaded Image" class="preview-img">
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
+
